@@ -17,3 +17,11 @@ functions:
       - http:
           path: graphiql
           method: get
+
+  api:
+    handler: api/frontcontroller.handler
+    events:
+      - http:
+          path: "{proxy+}"
+          method: any
+          cors: true

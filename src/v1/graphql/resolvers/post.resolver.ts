@@ -8,7 +8,6 @@ const posts = [
 const postResolvers = {
     Query: {
         posts: () => {
-            console.log('=>', posts);
             return posts
         }
     }

@@ -2,10 +2,9 @@ import {router} from "./router";
 
 const Hapi = require('hapi');
 export const hapiServer = new Hapi.Server();
-hapiServer.connection();
 hapiServer.route(router);
 
-exports.handler = (event: any, context: any, callback: any) => {
+exports.handler = async (event: any, context: any) => {
 
     // map lambda event to hapi request
     const options = {
@@ -16,11 +15,11 @@ exports.handler = (event: any, context: any, callback: any) => {
         validate: false
     };
 
-    hapiServer.inject(options, (response: any) => {
-        callback(null, {
-            statusCode: response.statusCode,
-            body: response.result
-        });
-    });
+    try {
+        const response = await hapiServer.inject(options);
+        return {body: response.result, statusCode: response.statusCode};
+    } catch (error) {
+        console.error(error);
+    }
 
 };

@@ -4,8 +4,8 @@
     "module": "commonjs",
     "allowJs": true,
     "strict": true,
-    "baseUrl": "./src/",
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "experimentalDecorators": true
   },
   "lib": [
     "es2015",

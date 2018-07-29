@@ -4,7 +4,7 @@ import Hapi = require("hapi");
 export const hapiServer = new Hapi.Server();
 hapiServer.route(router);
 
-exports.handler = async (event: any, context: any) => {
+exports.handler = async (event: any) => {
   // map lambda event to hapi request
   const options = {
     method: event.httpMethod,

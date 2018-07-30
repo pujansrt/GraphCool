@@ -1,4 +1,4 @@
-service: GraphCool2
+service: GraphCool
 plugins:
   - serverless-offline
 provider:

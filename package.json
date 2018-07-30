@@ -1,5 +1,5 @@
 {
-  "name": "GraphCool2",
+  "name": "GraphCool",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pujansrt/GraphCool2.git"
+    "url": "git+https://github.com/pujansrt/GraphCool.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pujansrt/GraphCool2/issues"
+    "url": "https://github.com/pujansrt/GraphCool/issues"
   },
-  "homepage": "https://github.com/pujansrt/GraphCool2#readme",
+  "homepage": "https://github.com/pujansrt/GraphCool#readme",
   "devDependencies": {
     "@types/hapi": "^17.0.16",
     "@types/node": "^10.5.4",

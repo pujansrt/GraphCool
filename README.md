@@ -2,24 +2,18 @@
 
 <img src="etc/gql.jpg" width="900">
 
-### Enable Playground
-
-##### 1.
+## Install
 
 ```
-npm i -S graphiql
+npm i
 ```
 
-##### 2.
+## Run
 
 ```
-    handler: src/v1/graphql/handler.graphql
-    events:
-      - http:
-          path: graphql
-          method: post
-          cors: true
-      - http:
-          path: graphql
-          method: get
+npm run offline
 ```
+
+## Offline
+
+Visit [http://localhost:5000/graphql](http://localhost:5000/graphql)

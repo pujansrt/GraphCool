@@ -16,7 +16,8 @@ exports.handler = async (event: any) => {
 
   try {
     const response = await hapiServer.inject(options);
-    return { body: response.result, statusCode: response.statusCode };
+    const body = { body: response.result, statusCode: response.statusCode };
+    return JSON.stringify(body);
   } catch (error) {
     console.error(error);
   }
